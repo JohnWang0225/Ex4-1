@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Ex4-1</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="tv_height">身高:</string>
+    <string name="tv_weight">體重:</string>
+    <string name="btn_back">返回</string>
+    <string name="btn_submit">送出</string>
+    <string name="btn_clear">清除</string>
+    
+    <string name="bmi">BMI值為:</string>
+    <string name="normal">正常</string>
+    <string name="over_weight">過重</string>
+</resources>
