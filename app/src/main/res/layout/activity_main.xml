@@ -18,7 +18,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etHeight" />
+        android:id="@+id/etHeight"
+        android:hint="@string/hint_height_cm" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -30,7 +31,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etWeight" />
+        android:id="@+id/etWeight"
+        android:hint="@string/hint_weight_kg" />
 
     <RelativeLayout
         android:layout_width="match_parent"

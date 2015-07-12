@@ -47,8 +47,10 @@ public class ResultActivity extends ActionBarActivity{
         
         if (calc>=18.5 && calc<24) {
             tvContent.setText(getString(R.string.normal));
-        }else if(calc >=24) {
+        }else if(calc >= 24) {
             tvContent.setText(getString(R.string.over_weight));
+        }else{
+            tvContent.setText(getString(R.string.too_thin));
         }
     }
 }

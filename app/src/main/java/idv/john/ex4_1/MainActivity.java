@@ -8,7 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
     private EditText etHeight, etWeight;
@@ -31,7 +31,6 @@ public class MainActivity extends ActionBarActivity {
                 sendContent();
             }
         });
-        
         btnClear = (Button) findViewById(R.id.btnClear);
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,10 +44,21 @@ public class MainActivity extends ActionBarActivity {
     private void sendContent() {
         Intent intent = new Intent(MainActivity.this, ResultActivity.class);
         Bundle bundle = new Bundle();
+        try{
         int Height = Integer.parseInt(etHeight.getText().toString());
         int Weight = Integer.parseInt(etWeight.getText().toString());
+        
+        if (String.valueOf(Height).isEmpty() || String.valueOf(Weight).isEmpty()){
+            throw new Exception();
+        }
+            
         bundle.putInt("Height", Height);
         bundle.putInt("Weight", Weight);
+        }catch (Exception e){
+            Toast.makeText(MainActivity.this, getString(R.string.error), Toast.LENGTH_SHORT).show();
+            return;
+        }
+        
         intent.putExtras(bundle);
         startActivity(intent);
     }

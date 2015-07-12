@@ -13,4 +13,9 @@
     <string name="bmi">BMI值為:</string>
     <string name="normal">正常</string>
     <string name="over_weight">過重</string>
+    <string name="too_thin">過輕</string>
+    <string name="error">輸入資料請勿空白，且輸入為數字。</string>
+    
+    <string name="hint_height_cm">公分</string>
+    <string name="hint_weight_kg">公斤</string>
 </resources>
